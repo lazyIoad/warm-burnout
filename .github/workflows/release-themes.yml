@@ -182,6 +182,15 @@ jobs:
             "Warm Burnout Dark.tmTheme" \
             "Warm Burnout Light.tmTheme"
 
+      - name: Package Sublime Text
+        run: |
+          cd sublime
+          zip -j ../warm-burnout-sublime.zip \
+            "Warm Burnout Dark.sublime-theme" \
+            "Warm Burnout Light.sublime-theme" \
+            "Warm Burnout Dark.sublime-color-scheme" \
+            "Warm Burnout Light.sublime-color-scheme"
+
       - name: Package Home Assistant
         run: cp themes/warm-burnout.yaml warm-burnout-home-assistant.yaml
 
@@ -229,6 +238,7 @@ jobs:
             warm-burnout-eza.zip
             warm-burnout-helix.zip
             warm-burnout-bat.zip
+            warm-burnout-sublime.zip
             warm-burnout-home-assistant.yaml
             warm-burnout-obsidian.zip
             warm-burnout-emacs.zip

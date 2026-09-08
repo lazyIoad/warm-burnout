@@ -60,6 +60,7 @@ warm-burnout/
     vim.rs                    # Vim theme validation tests
     helix.rs                  # Helix theme validation tests
     bat.rs                    # Bat theme validation tests
+    sublime.rs                # Sublime Text theme validation tests
     obsidian.rs               # Obsidian theme validation tests
     emacs.rs                  # Emacs theme validation tests
     opencode.rs               # OpenCode theme validation tests
@@ -203,10 +204,17 @@ warm-burnout/
     README.md                 # eza install instructions
     AGENTS.md                 # eza-specific agent rules
   bat/                        # Bat syntax highlighting theme
-    README.md                 # Bat install instructions
-    AGENTS.md                 # Bat-specific agent rules
-    Warm Burnout Dark.tmTheme # Dark variant (Sublime Text tmTheme)
+    README.md                  # Bat install instructions
+    AGENTS.md                  # Bat-specific agent rules
+    Warm Burnout Dark.tmTheme  # Dark variant (Sublime Text tmTheme)
     Warm Burnout Light.tmTheme # Light variant (Sublime Text tmTheme)
+  sublime/                     # Sublime Text themes and color schemes
+    README.md                  # Sublime Text install instructions
+    AGENTS.md                  # Sublime Text-specific agent rules
+    Warm Burnout Dark.sublime-theme         # Dark UI variant
+    Warm Burnout Light.sublime-theme        # Light UI variant
+    Warm Burnout Dark.sublime-color-scheme  # Dark syntax variant
+    Warm Burnout Light.sublime-color-scheme # Light syntax variant
   obsidian/                    # Obsidian community theme
     theme.css                  # Dark + light variants (CSS custom properties)
     manifest.json              # Community theme manifest

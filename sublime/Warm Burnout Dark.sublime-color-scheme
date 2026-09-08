@@ -1,0 +1,146 @@
+{
+  "name": "Warm Burnout Dark",
+  "globals": {
+    "background": "#1a1510",
+    "foreground": "#bfbdb6",
+    "caret": "#f5c56e",
+    "invisibles": "#746f67",
+    "line_highlight": "#222018",
+    "selection": "#33393a",
+    "selection_foreground": "#bfbdb6",
+    "gutter": "#1a1510",
+    "gutter_foreground": "#746f67",
+    "gutter_foreground_highlight": "#bfbdb6"
+  },
+  "rules": [
+    {
+      "name": "Comments",
+      "scope": "comment, punctuation.definition.comment",
+      "foreground": "#b4a89c",
+      "font_style": "italic"
+    },
+    {
+      "name": "Strings",
+      "scope": "string, punctuation.definition.string, string.quoted",
+      "foreground": "#b4bc78"
+    },
+    {
+      "name": "Regular Expressions And Escapes",
+      "scope": "string.regexp, constant.character.escape, constant.other.character-class, keyword.operator.quantifier.regexp",
+      "foreground": "#96b898"
+    },
+    {
+      "name": "Constants And Numbers",
+      "scope": "constant, constant.numeric, constant.language, constant.character, variable.other.constant",
+      "foreground": "#d4a8b8"
+    },
+    {
+      "name": "Keywords",
+      "scope": "keyword, keyword.control, keyword.other, storage, storage.modifier, storage.type",
+      "foreground": "#ff8f40",
+      "font_style": "bold"
+    },
+    {
+      "name": "Operators",
+      "scope": "keyword.operator, keyword.operator.assignment, keyword.operator.comparison, keyword.operator.logical, keyword.operator.arithmetic",
+      "foreground": "#f29668"
+    },
+    {
+      "name": "Functions",
+      "scope": "entity.name.function, support.function, meta.function-call, variable.function",
+      "foreground": "#ffb454"
+    },
+    {
+      "name": "Library Functions And Support",
+      "scope": "support.function.builtin, support.function.construct, support.constant, support.variable",
+      "foreground": "#ec9878"
+    },
+    {
+      "name": "Types And Classes",
+      "scope": "entity.name.type, entity.name.class, entity.name.struct, entity.name.enum, entity.name.trait, support.type, support.class",
+      "foreground": "#90aec0",
+      "font_style": "italic"
+    },
+    {
+      "name": "Decorators And Annotations",
+      "scope": "meta.decorator, meta.annotation, entity.name.function.decorator, punctuation.definition.annotation, storage.type.annotation",
+      "foreground": "#e6c08a",
+      "font_style": "italic"
+    },
+    {
+      "name": "Tags",
+      "scope": "entity.name.tag, punctuation.definition.tag",
+      "foreground": "#dc9e92",
+      "font_style": "bold"
+    },
+    {
+      "name": "Attributes",
+      "scope": "entity.other.attribute-name, meta.tag.attributes",
+      "foreground": "#ffb454"
+    },
+    {
+      "name": "CSS Properties",
+      "scope": "support.type.property-name.css, meta.property-name.css, variable.css",
+      "foreground": "#deb074",
+      "font_style": "italic"
+    },
+    {
+      "name": "Members And Properties",
+      "scope": "variable.other.member, variable.other.property, meta.property.object, meta.object-literal.key, support.variable.property",
+      "foreground": "#ec9878"
+    },
+    {
+      "name": "Parameters",
+      "scope": "variable.parameter",
+      "foreground": "#d4a8b8"
+    },
+    {
+      "name": "Language Variables",
+      "scope": "variable.language, variable.other.this, variable.language.this",
+      "foreground": "#dc9e92",
+      "font_style": "italic"
+    },
+    {
+      "name": "Punctuation",
+      "scope": "punctuation, punctuation.separator, punctuation.terminator, punctuation.section",
+      "foreground": "#bfbdb6"
+    },
+    {
+      "name": "Invalid",
+      "scope": "invalid, invalid.illegal, invalid.deprecated",
+      "foreground": "#f49090"
+    },
+    {
+      "name": "Markup Headings",
+      "scope": "markup.heading, entity.name.section",
+      "foreground": "#b4bc78",
+      "font_style": "bold"
+    },
+    {
+      "name": "Markup Links",
+      "scope": "markup.underline.link, markup.underline.link.image, string.other.link, meta.link",
+      "foreground": "#dc9e92",
+      "font_style": "underline"
+    },
+    {
+      "name": "Markup Raw",
+      "scope": "markup.raw, markup.raw.inline, markup.raw.block",
+      "foreground": "#f29668"
+    },
+    {
+      "name": "Diff Added",
+      "scope": "markup.inserted",
+      "foreground": "#b4bc78"
+    },
+    {
+      "name": "Diff Changed",
+      "scope": "markup.changed",
+      "foreground": "#ec9878"
+    },
+    {
+      "name": "Diff Deleted",
+      "scope": "markup.deleted",
+      "foreground": "#f49090"
+    }
+  ]
+}

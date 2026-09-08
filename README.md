@@ -130,6 +130,7 @@ Inspired by materials that age well. Unlike your eyes.
 | Vim | Available | [`vim/`](vim/) |
 | Helix | Available | [`helix/`](helix/) |
 | Bat | Available | [`bat/`](bat/) |
+| Sublime Text | Available | [`sublime/`](sublime/) |
 | Xcode | Available | [`xcode/`](xcode/) |
 | iTerm2 | Available | [`iterm2/`](iterm2/) |
 | Windows Terminal | Available | [`windows-terminal/`](windows-terminal/) |

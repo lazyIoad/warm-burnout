@@ -16,6 +16,7 @@ const READMES: &[(&str, &str)] = &[
   ("emacs", include_str!("../emacs/README.md")),
   ("helix", include_str!("../helix/README.md")),
   ("bat", include_str!("../bat/README.md")),
+  ("sublime", include_str!("../sublime/README.md")),
   ("wezterm", include_str!("../wezterm/README.md")),
   ("opencode", include_str!("../opencode/README.md")),
   ("moshi", include_str!("../moshi/README.md")),
@@ -71,6 +72,22 @@ fn no_theme_file_uses_patina_as_label() {
     ("helix/light", include_str!("../helix/warm-burnout-light.toml")),
     ("bat/dark", include_str!("../bat/Warm Burnout Dark.tmTheme")),
     ("bat/light", include_str!("../bat/Warm Burnout Light.tmTheme")),
+    (
+      "sublime/dark-ui",
+      include_str!("../sublime/Warm Burnout Dark.sublime-theme"),
+    ),
+    (
+      "sublime/light-ui",
+      include_str!("../sublime/Warm Burnout Light.sublime-theme"),
+    ),
+    (
+      "sublime/dark",
+      include_str!("../sublime/Warm Burnout Dark.sublime-color-scheme"),
+    ),
+    (
+      "sublime/light",
+      include_str!("../sublime/Warm Burnout Light.sublime-color-scheme"),
+    ),
     ("opencode/theme", include_str!("../opencode/warm-burnout.json")),
     ("moshi/dark", include_str!("../moshi/warm-burnout-dark.json")),
     ("moshi/light", include_str!("../moshi/warm-burnout-light.json")),

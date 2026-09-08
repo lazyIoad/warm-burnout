@@ -127,6 +127,7 @@ Then select **Warm Burnout Dark** or **Warm Burnout Light** with `Cmd+K Cmd+T` (
 - [Vim](https://github.com/felipefdl/warm-burnout/tree/main/vim)
 - [Helix](https://github.com/felipefdl/warm-burnout/tree/main/helix)
 - [Bat](https://github.com/felipefdl/warm-burnout/tree/main/bat)
+- [Sublime Text](https://github.com/felipefdl/warm-burnout/tree/main/sublime)
 - [Xcode](https://github.com/felipefdl/warm-burnout/tree/main/xcode)
 - [iTerm2](https://github.com/felipefdl/warm-burnout/tree/main/iterm2)
 - [Windows Terminal](https://github.com/felipefdl/warm-burnout/tree/main/windows-terminal)

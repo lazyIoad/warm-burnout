@@ -60,6 +60,39 @@ pub fn vscode_color(src: &str, key: &str) -> String {
   hex_to_lower(v["colors"][key].as_str().unwrap())
 }
 
+pub fn sublime_color_scheme_name(src: &str) -> String {
+  let v: serde_json::Value = serde_json::from_str(src).expect("invalid Sublime Text color scheme JSON");
+  v["name"]
+    .as_str()
+    .expect("Sublime Text color scheme missing name")
+    .to_string()
+}
+
+pub fn sublime_color_scheme_global(src: &str, key: &str) -> String {
+  let v: serde_json::Value = serde_json::from_str(src).expect("invalid Sublime Text color scheme JSON");
+  hex_to_lower(
+    v["globals"][key]
+      .as_str()
+      .unwrap_or_else(|| panic!("Sublime Text color scheme missing global: {key}")),
+  )
+}
+
+pub fn sublime_color_scheme_rule(src: &str, scope: &str, key: &str) -> String {
+  let v: serde_json::Value = serde_json::from_str(src).expect("invalid Sublime Text color scheme JSON");
+  let rules = v["rules"]
+    .as_array()
+    .expect("Sublime Text color scheme missing rules array");
+  let rule = rules
+    .iter()
+    .find(|rule| {
+      rule["scope"]
+        .as_str()
+        .is_some_and(|scopes| scopes.split(',').map(str::trim).any(|candidate| candidate == scope))
+    })
+    .unwrap_or_else(|| panic!("Sublime Text color scheme missing scope: {scope}"));
+  rule[key].as_str().map(hex_to_lower).unwrap_or_default()
+}
+
 pub fn zed_editor_color(src: &str, theme_name: &str, key: &str) -> String {
   let v: serde_json::Value = serde_json::from_str(src).unwrap();
   let themes = v["themes"].as_array().unwrap();

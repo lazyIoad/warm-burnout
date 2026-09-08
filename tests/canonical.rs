@@ -3,9 +3,9 @@ mod common;
 use common::{
   alacritty_color, bat_tmtheme_global_setting, emacs_palette_color, ghostty_ansi_color, ghostty_color,
   helix_palette_color, hex_to_lower, home_assistant_color, iterm2_color, jetbrains_attribute, jetbrains_color,
-  nvim_palette_color, obsidian_color, opencode_color, starship_palette_color, tmux_option_value, tmux_style_bg,
-  tmux_style_fg, vscode_color, warp_ansi_color, warp_color, wezterm_ansi_color, wezterm_color, windows_terminal_color,
-  xcode_color, xcode_syntax_color, zed_editor_color, zellij_color,
+  nvim_palette_color, obsidian_color, opencode_color, starship_palette_color, sublime_color_scheme_global,
+  tmux_option_value, tmux_style_bg, tmux_style_fg, vscode_color, warp_ansi_color, warp_color, wezterm_ansi_color,
+  wezterm_color, windows_terminal_color, xcode_color, xcode_syntax_color, zed_editor_color, zellij_color,
 };
 
 fn zsh_foreground(src: &str) -> Option<String> {
@@ -1110,6 +1110,59 @@ fn light_foreground_bat_matches_ghostty() {
   let bat = bat_tmtheme_global_setting(BAT_LIGHT, "foreground");
   let ghostty = ghostty_color(include_str!("../ghostty/warm-burnout-light"), "foreground");
   assert_eq!(bat, ghostty, "light foreground: bat={bat} ghostty={ghostty}");
+}
+
+// -- Sublime Text cross-platform consistency --
+
+const SUBLIME_DARK: &str = include_str!("../sublime/Warm Burnout Dark.sublime-color-scheme");
+const SUBLIME_LIGHT: &str = include_str!("../sublime/Warm Burnout Light.sublime-color-scheme");
+
+#[test]
+fn dark_background_sublime_matches_ghostty() {
+  let sublime = sublime_color_scheme_global(SUBLIME_DARK, "background");
+  let ghostty = ghostty_color(include_str!("../ghostty/warm-burnout-dark"), "background");
+  assert_eq!(sublime, ghostty, "dark background: sublime={sublime} ghostty={ghostty}");
+}
+
+#[test]
+fn light_background_sublime_matches_ghostty() {
+  let sublime = sublime_color_scheme_global(SUBLIME_LIGHT, "background");
+  let ghostty = ghostty_color(include_str!("../ghostty/warm-burnout-light"), "background");
+  assert_eq!(
+    sublime, ghostty,
+    "light background: sublime={sublime} ghostty={ghostty}"
+  );
+}
+
+#[test]
+fn dark_foreground_sublime_matches_ghostty() {
+  let sublime = sublime_color_scheme_global(SUBLIME_DARK, "foreground");
+  let ghostty = ghostty_color(include_str!("../ghostty/warm-burnout-dark"), "foreground");
+  assert_eq!(sublime, ghostty, "dark foreground: sublime={sublime} ghostty={ghostty}");
+}
+
+#[test]
+fn light_foreground_sublime_matches_ghostty() {
+  let sublime = sublime_color_scheme_global(SUBLIME_LIGHT, "foreground");
+  let ghostty = ghostty_color(include_str!("../ghostty/warm-burnout-light"), "foreground");
+  assert_eq!(
+    sublime, ghostty,
+    "light foreground: sublime={sublime} ghostty={ghostty}"
+  );
+}
+
+#[test]
+fn dark_cursor_sublime_matches_ghostty() {
+  let sublime = sublime_color_scheme_global(SUBLIME_DARK, "caret");
+  let ghostty = ghostty_color(include_str!("../ghostty/warm-burnout-dark"), "cursor-color");
+  assert_eq!(sublime, ghostty, "dark cursor: sublime={sublime} ghostty={ghostty}");
+}
+
+#[test]
+fn light_cursor_sublime_matches_ghostty() {
+  let sublime = sublime_color_scheme_global(SUBLIME_LIGHT, "caret");
+  let ghostty = ghostty_color(include_str!("../ghostty/warm-burnout-light"), "cursor-color");
+  assert_eq!(sublime, ghostty, "light cursor: sublime={sublime} ghostty={ghostty}");
 }
 
 // -- WezTerm cross-platform consistency --
